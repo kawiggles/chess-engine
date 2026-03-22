@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kawiggles/Programming/Chess Engine/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -136,29 +136,77 @@ engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
-main.o: main.c.o
-.PHONY : main.o
+bitboards.o: bitboards.c.o
+.PHONY : bitboards.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/main.c.o
-.PHONY : main.c.o
+bitboards.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/bitboards.c.o
+.PHONY : bitboards.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+bitboards.i: bitboards.c.i
+.PHONY : bitboards.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/main.c.i
-.PHONY : main.c.i
+bitboards.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/bitboards.c.i
+.PHONY : bitboards.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+bitboards.s: bitboards.c.s
+.PHONY : bitboards.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/main.c.s
-.PHONY : main.c.s
+bitboards.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/bitboards.c.s
+.PHONY : bitboards.c.s
+
+engine.o: engine.c.o
+.PHONY : engine.o
+
+# target to build an object file
+engine.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/engine.c.o
+.PHONY : engine.c.o
+
+engine.i: engine.c.i
+.PHONY : engine.i
+
+# target to preprocess a source file
+engine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/engine.c.i
+.PHONY : engine.c.i
+
+engine.s: engine.c.s
+.PHONY : engine.s
+
+# target to generate assembly for a file
+engine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/engine.c.s
+.PHONY : engine.c.s
+
+init.o: init.c.o
+.PHONY : init.o
+
+# target to build an object file
+init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/init.c.o
+.PHONY : init.c.o
+
+init.i: init.c.i
+.PHONY : init.i
+
+# target to preprocess a source file
+init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/init.c.i
+.PHONY : init.c.i
+
+init.s: init.c.s
+.PHONY : init.s
+
+# target to generate assembly for a file
+init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/init.c.s
+.PHONY : init.c.s
 
 # Help Target
 help:
@@ -170,9 +218,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... engine"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... bitboards.o"
+	@echo "... bitboards.i"
+	@echo "... bitboards.s"
+	@echo "... engine.o"
+	@echo "... engine.i"
+	@echo "... engine.s"
+	@echo "... init.o"
+	@echo "... init.i"
+	@echo "... init.s"
 .PHONY : help
 
 

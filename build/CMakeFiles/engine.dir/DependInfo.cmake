@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/kawiggles/Programming/Chess Engine/main.c" "CMakeFiles/engine.dir/main.c.o" "gcc" "CMakeFiles/engine.dir/main.c.o.d"
+  "/home/kawiggles/Programming/Chess Engine/bitboards.c" "CMakeFiles/engine.dir/bitboards.c.o" "gcc" "CMakeFiles/engine.dir/bitboards.c.o.d"
+  "/home/kawiggles/Programming/Chess Engine/engine.c" "CMakeFiles/engine.dir/engine.c.o" "gcc" "CMakeFiles/engine.dir/engine.c.o.d"
+  "/home/kawiggles/Programming/Chess Engine/init.c" "CMakeFiles/engine.dir/init.c.o" "gcc" "CMakeFiles/engine.dir/init.c.o.d"
   "" "engine" "gcc" "CMakeFiles/engine.dir/link.d"
   )
 

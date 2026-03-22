@@ -1,1 +1,1 @@
-/usr/bin/cc -Wl,--dependency-file=CMakeFiles/engine.dir/link.d CMakeFiles/engine.dir/main.c.o -o engine
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/engine.dir/link.d CMakeFiles/engine.dir/engine.c.o CMakeFiles/engine.dir/init.c.o CMakeFiles/engine.dir/bitboards.c.o -o engine

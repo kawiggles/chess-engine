@@ -2,7 +2,9 @@ engine: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
-  CMakeFiles/engine.dir/main.c.o \
+  CMakeFiles/engine.dir/engine.c.o \
+  CMakeFiles/engine.dir/init.c.o \
+  CMakeFiles/engine.dir/bitboards.c.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
@@ -31,7 +33,11 @@ engine: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
-CMakeFiles/engine.dir/main.c.o:
+CMakeFiles/engine.dir/engine.c.o:
+
+CMakeFiles/engine.dir/init.c.o:
+
+CMakeFiles/engine.dir/bitboards.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
 

@@ -72,32 +72,64 @@ include CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/codegen:
 .PHONY : CMakeFiles/engine.dir/codegen
 
-CMakeFiles/engine.dir/main.c.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/main.c.o: /home/kawiggles/Programming/Chess\ Engine/main.c
-CMakeFiles/engine.dir/main.c.o: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/engine.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/engine.dir/main.c.o -MF CMakeFiles/engine.dir/main.c.o.d -o CMakeFiles/engine.dir/main.c.o -c "/home/kawiggles/Programming/Chess Engine/main.c"
+CMakeFiles/engine.dir/engine.c.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/engine.c.o: /home/kawiggles/Programming/Chess\ Engine/engine.c
+CMakeFiles/engine.dir/engine.c.o: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/engine.dir/engine.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/engine.dir/engine.c.o -MF CMakeFiles/engine.dir/engine.c.o.d -o CMakeFiles/engine.dir/engine.c.o -c "/home/kawiggles/Programming/Chess Engine/engine.c"
 
-CMakeFiles/engine.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/engine.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/kawiggles/Programming/Chess Engine/main.c" > CMakeFiles/engine.dir/main.c.i
+CMakeFiles/engine.dir/engine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/engine.dir/engine.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/kawiggles/Programming/Chess Engine/engine.c" > CMakeFiles/engine.dir/engine.c.i
 
-CMakeFiles/engine.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/engine.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/kawiggles/Programming/Chess Engine/main.c" -o CMakeFiles/engine.dir/main.c.s
+CMakeFiles/engine.dir/engine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/engine.dir/engine.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/kawiggles/Programming/Chess Engine/engine.c" -o CMakeFiles/engine.dir/engine.c.s
+
+CMakeFiles/engine.dir/init.c.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/init.c.o: /home/kawiggles/Programming/Chess\ Engine/init.c
+CMakeFiles/engine.dir/init.c.o: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/engine.dir/init.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/engine.dir/init.c.o -MF CMakeFiles/engine.dir/init.c.o.d -o CMakeFiles/engine.dir/init.c.o -c "/home/kawiggles/Programming/Chess Engine/init.c"
+
+CMakeFiles/engine.dir/init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/engine.dir/init.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/kawiggles/Programming/Chess Engine/init.c" > CMakeFiles/engine.dir/init.c.i
+
+CMakeFiles/engine.dir/init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/engine.dir/init.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/kawiggles/Programming/Chess Engine/init.c" -o CMakeFiles/engine.dir/init.c.s
+
+CMakeFiles/engine.dir/bitboards.c.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/bitboards.c.o: /home/kawiggles/Programming/Chess\ Engine/bitboards.c
+CMakeFiles/engine.dir/bitboards.c.o: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/engine.dir/bitboards.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/engine.dir/bitboards.c.o -MF CMakeFiles/engine.dir/bitboards.c.o.d -o CMakeFiles/engine.dir/bitboards.c.o -c "/home/kawiggles/Programming/Chess Engine/bitboards.c"
+
+CMakeFiles/engine.dir/bitboards.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/engine.dir/bitboards.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/kawiggles/Programming/Chess Engine/bitboards.c" > CMakeFiles/engine.dir/bitboards.c.i
+
+CMakeFiles/engine.dir/bitboards.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/engine.dir/bitboards.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/kawiggles/Programming/Chess Engine/bitboards.c" -o CMakeFiles/engine.dir/bitboards.c.s
 
 # Object files for target engine
 engine_OBJECTS = \
-"CMakeFiles/engine.dir/main.c.o"
+"CMakeFiles/engine.dir/engine.c.o" \
+"CMakeFiles/engine.dir/init.c.o" \
+"CMakeFiles/engine.dir/bitboards.c.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
 
-engine: CMakeFiles/engine.dir/main.c.o
+engine: CMakeFiles/engine.dir/engine.c.o
+engine: CMakeFiles/engine.dir/init.c.o
+engine: CMakeFiles/engine.dir/bitboards.c.o
 engine: CMakeFiles/engine.dir/build.make
 engine: CMakeFiles/engine.dir/compiler_depend.ts
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/kawiggles/Programming/Chess Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

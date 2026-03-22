@@ -1,10 +1,28 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#include "stdlib.h"
+
+// Custom Assert
+#define DEBUG
+
+#ifndef DEBUG
+#define ASSERT(n)
+#else
+#define ASSERT(n) \
+    if(!(n)) { \
+    printf("%s - Failed\n",#n); \
+    printf("At %s ", __TIME__); \
+    printf("in file %s ", __FILE__); \
+    printf("at line %d\n", __LINE__); \
+    exit(1); }
+#endif
+
 typedef unsigned long long U64;
 
 #define NAME "Engine 1.0"
 #define BRD_SQ_NM 120
+#define MAXGAMESMOVES 2048
 
 enum { EMPTY, wP, wN, wB, wR, wQ, wK, bP, bN, bB, bR, bQ, bK };
 enum { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
@@ -21,12 +39,28 @@ enum {
     A8 = 91, B8, C8, D8, E8, F8, G8, H8, NO_SQ
 };
 enum { FALSE, TRUE };
+enum { WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8 };
+
+typedef struct {
+
+    int move;
+    int castlePerm;
+    int enPas;
+    int fiftyMove;
+    U64 posKey;
+
+} S_UNDO;
 
 // Chess equivalent of Game Instance
 typedef struct {
 
     int pieces[BRD_SQ_NM];
     U64 pawns[3];
+    int pList[13][10];
+    int pceNum[13];
+    int bigPce[3];
+    int majPce[3];
+    int minPce[3];
 
     int KingSq[2];
 
@@ -37,8 +71,32 @@ typedef struct {
     int ply;
     int hisPly;
 
+    int castlePerm;
+
     U64 posKey;
 
+    S_UNDO history[MAXGAMESMOVES];
+
+
 } S_BOARD;
+
+/* MACROS */
+
+#define FR2SQ(f,r) ( (21 + (f)) + ((r) * 10) )
+#define SQ64(sq120) Sq120ToSq64[sq120]
+
+/* GLOBALS */
+
+extern int Sq120ToSq64[BRD_SQ_NM];
+extern int Sq64ToSq120[64];
+
+/* FUNCTIONS */
+
+extern void AllInit();
+extern int popBit(U64 *bb);
+extern inline U64 setBit(U64 bb, int sq);
+extern inline U64 clearBit(U64 bb, int sq);
+extern int countBits(U64 b);
+extern void printBitBoard(U64 bb);
 
 #endif

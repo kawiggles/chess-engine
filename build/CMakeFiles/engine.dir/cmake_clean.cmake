@@ -1,7 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/link.d"
-  "CMakeFiles/engine.dir/main.c.o"
-  "CMakeFiles/engine.dir/main.c.o.d"
+  "CMakeFiles/engine.dir/bitboards.c.o"
+  "CMakeFiles/engine.dir/bitboards.c.o.d"
+  "CMakeFiles/engine.dir/engine.c.o"
+  "CMakeFiles/engine.dir/engine.c.o.d"
+  "CMakeFiles/engine.dir/init.c.o"
+  "CMakeFiles/engine.dir/init.c.o.d"
   "engine"
   "engine.pdb"
 )

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/bitboards.c.o.d"
   "CMakeFiles/engine.dir/engine.c.o"
   "CMakeFiles/engine.dir/engine.c.o.d"
+  "CMakeFiles/engine.dir/hashkeys.c.o"
+  "CMakeFiles/engine.dir/hashkeys.c.o.d"
   "CMakeFiles/engine.dir/init.c.o"
   "CMakeFiles/engine.dir/init.c.o.d"
   "engine"

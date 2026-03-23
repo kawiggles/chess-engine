@@ -5,6 +5,7 @@ engine: \
   CMakeFiles/engine.dir/engine.c.o \
   CMakeFiles/engine.dir/init.c.o \
   CMakeFiles/engine.dir/bitboards.c.o \
+  CMakeFiles/engine.dir/hashkeys.c.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libgcc_s.so \
@@ -38,6 +39,8 @@ CMakeFiles/engine.dir/engine.c.o:
 CMakeFiles/engine.dir/init.c.o:
 
 CMakeFiles/engine.dir/bitboards.c.o:
+
+CMakeFiles/engine.dir/hashkeys.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
 

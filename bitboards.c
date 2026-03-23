@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "definitions.h"
 #include "stdio.h"
 
 const int BitTable[64] = {
@@ -13,14 +13,6 @@ int popBit(U64 *bb) {
     unsigned int fold = (unsigned) ((b & 0xffffffff) ^ (b >> 32));
     *bb &= (*bb - 1);
     return BitTable[(fold * 0x783a9b23) >> 26];
-}
-
-inline U64 setBit(U64 bb, int sq) {
-    return bb | (1ULL << sq);
-}
-
-inline U64 clearBit(U64 bb, int sq) {
-    return bb & ~(1ULL << sq);
 }
 
 int countBits(U64 b) {

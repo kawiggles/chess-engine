@@ -94,8 +94,8 @@ extern int Sq64ToSq120[64];
 
 extern void AllInit();
 extern int popBit(U64 *bb);
-extern inline U64 setBit(U64 bb, int sq);
-extern inline U64 clearBit(U64 bb, int sq);
+static inline U64 setBit(U64 bb, int sq) { return bb | (1ULL << sq); }
+static inline U64 clearBit(U64 bb, int sq) { return bb & ~(1ULL << sq); }
 extern int countBits(U64 b);
 extern void printBitBoard(U64 bb);
 

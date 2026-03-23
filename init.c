@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "definitions.h"
 
 int Sq120ToSq64[BRD_SQ_NM];
 int Sq64ToSq120[64];

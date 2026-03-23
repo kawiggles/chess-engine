@@ -1,3 +1,0 @@
-/home/kawiggles/Programming/Chess Engine/build/CMakeFiles/engine.dir
-/home/kawiggles/Programming/Chess Engine/build/CMakeFiles/edit_cache.dir
-/home/kawiggles/Programming/Chess Engine/build/CMakeFiles/rebuild_cache.dir

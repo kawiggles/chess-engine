@@ -2,4 +2,4 @@ cmake_minimum_required(VERSION 4.2.3)
 
 project(Chess_Engine)
 
-add_executable(engine engine.c init.c bitboards.c hashkeys.c board.c)
+add_executable(engine engine.c init.c bitboards.c hashkeys.c board.c data.c)

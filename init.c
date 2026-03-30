@@ -5,10 +5,10 @@
  * each 15 bit section of the 64 bit number and shift it some amount of bits 
  * over to fill in each part of the 64 bits
  */
-# define RAND_64 (  (U64) rand() + \
-                    (U64) rand() << 15 + \
-                    (U64) rand() << 30 + \
-                    (U64) rand() << 45 + \
+# define RAND_64 (  (U64) rand() | \
+                    (U64) rand() << 15 | \
+                    (U64) rand() << 30 | \
+                    (U64) rand() << 45 | \
                     ( (U64) rand() & 0xf) << 60     )
 
 int Sq120ToSq64[BRD_SQ_NM];

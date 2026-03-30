@@ -2,7 +2,7 @@
 
 #include "stdio.h"
 
-int Parse_Fen(char * fen, S_BOARD * pos) {
+int parseFen(char * fen, S_BOARD * pos) {
     ASSERT(fen != NULL);
     ASSERT(pos != NULL);
 
@@ -132,4 +132,29 @@ void resetBoard(S_BOARD * pos) {
     pos->castlePerm = 0;
 
     pos->posKey = 0ULL;
+}
+
+void printBoard(const S_BOARD * pos) {
+    printf("\nGame Board:\n\n");
+    
+    for (int r = RANK_8; r >= RANK_1; r--) {
+        printf("%d  ", r+1);
+        for (int f = FILE_A; f <= FILE_H; f++) {
+            int piece = pos->pieces[FR2SQ(f, r)];
+            printf("%3c", PceChar[piece]);
+        }
+        printf("\n");
+    }
+
+    printf("\n   ");
+    for (int f = FILE_A; f <= FILE_H; f++) printf("%3c", 'a' + f);
+    printf("\n");
+    printf("side: %c\n", SideChar[pos->side]);
+    printf("enPas: %d\n", pos->enPas);
+    printf("castle: %c%c%c%c\n",
+            pos->castlePerm & WKCA ? 'K' : '-',
+            pos->castlePerm & WQCA ? 'Q' : '-',
+            pos->castlePerm & BKCA ? 'k' : '-',
+            pos->castlePerm & BQCA ? 'q' : '-');
+    printf("PosKey: %llX\n", pos->posKey);
 }

@@ -2,23 +2,27 @@
 #include "stdlib.h"
 #include "definitions.h"
 
+#define FEN1 "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+#define FEN2 "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"
+#define FEN3 "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
+
 int main() {
     
     AllInit();
 
-    U64 playBitBoard = 0ULL;
+    S_BOARD board[1];
 
-    int PieceOne = rand();
-    int PieceTwo = rand();
-    int PieceThree = rand();
-    int PieceFour = rand();
+    parseFen(START_FEN, board);
+    printBoard(board);
 
-    printf("PieceOne: %X\n", PieceOne);
-    printf("PieceTwo: %X\n", PieceTwo);
-    printf("PieceThree: %X\n", PieceThree);
-    printf("PieceFour: %X\n", PieceFour);
+    parseFen(FEN1, board);
+    printBoard(board);
 
-    printBitBoard(playBitBoard);
+    parseFen(FEN2, board);
+    printBoard(board);
+    
+    parseFen(FEN3, board);
+    printBoard(board);
 
     return 0;
 }

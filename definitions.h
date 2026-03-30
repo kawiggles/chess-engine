@@ -23,8 +23,9 @@ typedef unsigned long long U64;
 #define NAME "Engine 1.0"
 #define BRD_SQ_NM 120
 #define MAXGAMESMOVES 2048
+#define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
-enum { EMPTY, wP, wN, wB, wR, wQ, wK, bP, bN, bB, bR, bQ, bK };
+enum { OFFBOARD, EMPTY, wP, wN, wB, wR, wQ, wK, bP, bN, bB, bR, bQ, bK };
 enum { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
 enum { RANK_1, RANK_2, RANK_3, RANK_4, RANK_5, RANK_6, RANK_7, RANK_8, RANK_NONE };
 enum { WHITE, BLACK, BOTH };
@@ -83,20 +84,35 @@ typedef struct {
 /* MACROS */
 
 #define FR2SQ(f,r) ( (21 + (f)) + ((r) * 10) )
-#define SQ64(sq120) Sq120ToSq64[sq120]
+#define SQ64(sq120) (Sq120ToSq64[sq120])
+#define SQ120(sq64) (Sq64ToSq120[sq64])
 
 /* GLOBALS */
 
 extern int Sq120ToSq64[BRD_SQ_NM];
 extern int Sq64ToSq120[64];
+extern U64 SetMask[64];
+extern U64 ClearMask[64];
+extern U64 PieceKeys[13][120];
+extern U64 SideKey;
+extern U64 CastleKeys[16];
 
 /* FUNCTIONS */
-
-extern void AllInit();
-extern int popBit(U64 *bb);
 static inline U64 setBit(U64 bb, int sq) { return bb | (1ULL << sq); }
 static inline U64 clearBit(U64 bb, int sq) { return bb & ~(1ULL << sq); }
-extern int countBits(U64 b);
+
+// init.c
+extern void AllInit();
+
+// bitboards.c
 extern void printBitBoard(U64 bb);
+extern int popBit(U64 *bb);
+extern int countBits(U64 b);
+
+// hashkeys.c
+extern U64 generatePosKey(const S_BOARD * pos);
+
+// board.c
+extern void resetBoard(S_BOARD * pos);
 
 #endif
